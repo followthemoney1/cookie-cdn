@@ -24,16 +24,51 @@ CookieConsent.run({
         analytics: {},
         marketing: {}
     },
+    onFirstConsent: ({cookie}) => {
+        console.log('Cookies accepted:', cookie);
+        
+        let consentUpdate = {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        };
+    
+        if (cookie.categories.includes('analytics')) {
+          consentUpdate.analytics_storage = 'granted';
+        }
+    
+        if (cookie.categories.includes('ads')) {
+          consentUpdate.ad_storage = 'granted';
+          consentUpdate.ad_user_data = 'granted';
+          consentUpdate.ad_personalization = 'granted';
+        }
+        console.log("update consent");
+        // Update Google Analytics consent
+        gtag('consent', 'update', consentUpdate);
+    },
     onConsent: ({cookie}) => {
         console.log('Cookies accepted:', cookie);
         
-        gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
-        });
-
+        let consentUpdate = {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        };
+    
+        if (cookie.categories.includes('analytics')) {
+          consentUpdate.analytics_storage = 'granted';
+        }
+    
+        if (cookie.categories.includes('ads')) {
+          consentUpdate.ad_storage = 'granted';
+          consentUpdate.ad_user_data = 'granted';
+          consentUpdate.ad_personalization = 'granted';
+        }
+        console.log("update consent");
+        // Update Google Analytics consent
+        gtag('consent', 'update', consentUpdate);
       },    
     language: {
         default: "en",
