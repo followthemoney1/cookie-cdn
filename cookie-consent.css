@@ -4,35 +4,34 @@
 .cc--dark-turquoise {
     color-scheme: dark;
 
-    --cc-bg: #161a1c;
-    --cc-primary-color: rgb(239, 244, 246);
-    --cc-secondary-color: #b1bdc3;
+    --cc-bg: #0f1112; /* Background color */
+    --cc-primary-color: #ffffff; /* Text color */
+    --cc-secondary-color: #b1bdc3; /* Secondary text color */
 
-    --cc-btn-primary-bg: #10CA99;
-    --cc-btn-primary-color: #000;
-    --cc-btn-primary-hover-bg: #10CA99;
-    --cc-btn-primary-hover-color: #000;
+    --cc-btn-primary-bg: #10CA99; /* Button background */
+    --cc-btn-primary-color: #000000; /* Button text color */
+    --cc-btn-primary-hover-bg: #10CA99; /* Button hover background */
+    --cc-btn-primary-hover-color: #000000; /* Button hover text color */
 
-    --cc-btn-secondary-bg: #242c31;
-    --cc-btn-secondary-color: var(--cc-primary-color);
-    --cc-btn-secondary-hover-bg: #d4dae0;
-    --cc-btn-secondary-hover-color: #000;
+    --cc-btn-secondary-bg: #242c31; /* Secondary button background */
+    --cc-btn-secondary-color: var(--cc-primary-color); /* Secondary button text color */
+    --cc-btn-secondary-hover-bg: #d4dae0; /* Secondary button hover background */
+    --cc-btn-secondary-hover-color: #000000; /* Secondary button hover text color */
 
-    --cc-cookie-category-block-bg: #1e2428;
-    --cc-cookie-category-block-border: #1e2428;
-    --cc-cookie-category-block-hover-bg: #242c31;
-    --cc-cookie-category-block-hover-border: #242c31;
-    --cc-cookie-category-expanded-block-hover-bg: #242c31;
-    --cc-cookie-category-expanded-block-bg: #1e2428;
-    --cc-toggle-readonly-bg: #343e45;
-    --cc-overlay-bg: rgba(4, 6, 8, .85)!important;
+    --cc-cookie-category-block-bg: #1e2428; /* Category block background */
+    --cc-cookie-category-block-border: #1e2428; /* Category block border */
+    --cc-cookie-category-block-hover-bg: #242c31; /* Category block hover background */
+    --cc-cookie-category-block-hover-border: #242c31; /* Category block hover border */
+    --cc-cookie-category-expanded-block-hover-bg: #242c31; /* Expanded block hover background */
+    --cc-cookie-category-expanded-block-bg: #1e2428; /* Expanded block background */
+    --cc-toggle-readonly-bg: #343e45; /* Toggle background */
+    --cc-overlay-bg: rgba(4, 6, 8, .85)!important; /* Overlay background */
 
-    --cc-toggle-on-knob-bg: var(--cc-bg);
-    --cc-toggle-readonly-knob-bg: var( --cc-cookie-category-block-bg);
+    --cc-toggle-on-knob-bg: var(--cc-bg); /* Toggle knob background */
+    --cc-toggle-readonly-knob-bg: var(--cc-cookie-category-block-bg); /* Toggle readonly knob background */
 
-    --cc-separator-border-color: #222a30;
+    --cc-separator-border-color: #222a30; /* Separator border color */
 
-    --cc-footer-border-color: #212529;
-    --cc-footer-bg: #0f1112;
+    --cc-footer-border-color: #212529; /* Footer border color */
+    --cc-footer-bg: #0f1112; /* Footer background */
 }
-
