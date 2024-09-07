@@ -24,29 +24,29 @@ CookieConsent.run({
         analytics: {},
         marketing: {}
     },
-    // onAccept: ({cookie}) => {
-    //     console.log('Cookies accepted:', cookie);
+    onAccept: ({cookie}) => {
+        console.log('Cookies accepted:', cookie);
         
-    //     let consentUpdate = {
-    //       'ad_storage': 'denied',
-    //       'ad_user_data': 'denied',
-    //       'ad_personalization': 'denied',
-    //       'analytics_storage': 'denied'
-    //     };
+        let consentUpdate = {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        };
     
-    //     if (cookie.categories.includes('analytics')) {
-    //       consentUpdate.analytics_storage = 'granted';
-    //     }
+        if (cookie.categories.includes('analytics')) {
+          consentUpdate.analytics_storage = 'granted';
+        }
     
-    //     if (cookie.categories.includes('ads')) {
-    //       consentUpdate.ad_storage = 'granted';
-    //       consentUpdate.ad_user_data = 'granted';
-    //       consentUpdate.ad_personalization = 'granted';
-    //     }
+        if (cookie.categories.includes('ads')) {
+          consentUpdate.ad_storage = 'granted';
+          consentUpdate.ad_user_data = 'granted';
+          consentUpdate.ad_personalization = 'granted';
+        }
     
-    //     // Update Google Analytics consent
-    //     gtag('consent', 'update', consentUpdate);
-    //   },    
+        // Update Google Analytics consent
+        gtag('consent', 'update', consentUpdate);
+      },    
     language: {
         default: "en",
         autoDetect: "browser",
