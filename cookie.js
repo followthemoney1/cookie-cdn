@@ -54,7 +54,7 @@ CookieConsent.run({
             en: {
                 consentModal: {
                     title: "Hello king, it's cookie time!",
-                    description: "Our platfomr uses cookies toBy continuing to use Porada, you consent to our use of cookies in accordance with this description and our full Cookie Policy, which provides more detailed information about our practices",
+                    description: "By continuing to use Porada, you consent to our use of cookies in accordance with this description and our full Cookie Policy, which provides more detailed information about our practices",
                     acceptAllBtn: "Accept all",
                     acceptNecessaryBtn: "Reject all",
                     showPreferencesBtn: "Manage preferences",
