@@ -24,7 +24,7 @@ CookieConsent.run({
         analytics: {},
         marketing: {}
     },
-    onAccept: ({cookie}) => {
+    onConsent: ({cookie}) => {
         console.log('Cookies accepted:', cookie);
         
         let consentUpdate = {
