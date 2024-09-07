@@ -38,7 +38,7 @@ CookieConsent.run({
           consentUpdate.analytics_storage = 'granted';
         }
     
-        if (cookie.categories.includes('ads')) {
+        if (cookie.categories.includes('necessary')) {
           consentUpdate.ad_storage = 'granted';
           consentUpdate.ad_user_data = 'granted';
           consentUpdate.ad_personalization = 'granted';
@@ -61,7 +61,7 @@ CookieConsent.run({
           consentUpdate.analytics_storage = 'granted';
         }
     
-        if (cookie.categories.includes('ads')) {
+        if (cookie.categories.includes('necessary')) {
           consentUpdate.ad_storage = 'granted';
           consentUpdate.ad_user_data = 'granted';
           consentUpdate.ad_personalization = 'granted';
