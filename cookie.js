@@ -15,7 +15,7 @@ CookieConsent.run({
             flipButtons: false
         }
     },
-    theme: 'elegant-black',
+    theme: 'dark-turquoise',
     categories: {
         necessary: {
             readOnly: true
