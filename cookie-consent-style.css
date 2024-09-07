@@ -13,18 +13,18 @@
     --cc-btn-primary-hover-bg: #10CA99; /* Button hover background */
     --cc-btn-primary-hover-color: #000000; /* Button hover text color */
 
-    --cc-btn-secondary-bg: #242c31; /* Secondary button background */
+    --cc-btn-secondary-bg: #1F2120; /* Secondary button background */
     --cc-btn-secondary-color: var(--cc-primary-color); /* Secondary button text color */
     --cc-btn-secondary-hover-bg: #d4dae0; /* Secondary button hover background */
     --cc-btn-secondary-hover-color: #000000; /* Secondary button hover text color */
 
-    --cc-cookie-category-block-bg: #151616; /* Category block background */
+    --cc-cookie-category-block-bg: #1F2120; /* Category block background */
     --cc-cookie-category-block-border: #10CA99; /* Category block border */
-    --cc-cookie-category-block-hover-bg: #151616; /* Category block hover background */
-    --cc-cookie-category-block-hover-border: #151616; /* Category block hover border */
-    --cc-cookie-category-expanded-block-hover-bg: #151616; /* Expanded block hover background */
-    --cc-cookie-category-expanded-block-bg: #151616; /* Expanded block background */
-    --cc-toggle-readonly-bg: #151616; /* Toggle background */
+    --cc-cookie-category-block-hover-bg: #1F2120; /* Category block hover background */
+    --cc-cookie-category-block-hover-border: #1F2120; /* Category block hover border */
+    --cc-cookie-category-expanded-block-hover-bg: #1F2120; /* Expanded block hover background */
+    --cc-cookie-category-expanded-block-bg: #1F2120; /* Expanded block background */
+    --cc-toggle-readonly-bg: #1F2120; /* Toggle background */
     --cc-overlay-bg: rgba(4, 6, 8, .85)!important; /* Overlay background */
 
     --cc-toggle-on-knob-bg: var(--cc-bg); /* Toggle knob background */
@@ -33,5 +33,5 @@
     --cc-separator-border-color: #222a30; /* Separator border color */
 
     --cc-footer-border-color: #151616; /* Footer border color */
-    --cc-footer-bg: #151616; /* Footer background */
+    --cc-footer-bg: #1F2120; /* Footer background */
 }
