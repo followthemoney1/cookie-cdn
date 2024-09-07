@@ -24,18 +24,41 @@ CookieConsent.run({
         analytics: {},
         marketing: {}
     },
+    onAccept: ({cookie}) => {
+        console.log('Cookies accepted:', cookie);
+        
+        let consentUpdate = {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        };
+    
+        if (cookie.categories.includes('analytics')) {
+          consentUpdate.analytics_storage = 'granted';
+        }
+    
+        if (cookie.categories.includes('ads')) {
+          consentUpdate.ad_storage = 'granted';
+          consentUpdate.ad_user_data = 'granted';
+          consentUpdate.ad_personalization = 'granted';
+        }
+    
+        // Update Google Analytics consent
+        gtag('consent', 'update', consentUpdate);
+      },    
     language: {
         default: "en",
         autoDetect: "browser",
         translations: {
             en: {
                 consentModal: {
-                    title: "Hello traveller, it's cookie time!",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+                    title: "Hello king, it's cookie time!",
+                    description: "Our platfomr uses cookies toBy continuing to use Porada, you consent to our use of cookies in accordance with this description and our full Cookie Policy, which provides more detailed information about our practices",
                     acceptAllBtn: "Accept all",
                     acceptNecessaryBtn: "Reject all",
                     showPreferencesBtn: "Manage preferences",
-                    footer: "<a href=\"#link\">Privacy Policy</a>\n<a href=\"#link\">Terms and conditions</a>"
+                    footer: "<a href=\"#link\">Privacy Policy</a>\n<a href=\"https://www.porada.app/privacy-policy\">Terms and conditions</a>"
                 },
                 preferencesModal: {
                     title: "Consent Preferences Center",
@@ -47,31 +70,31 @@ CookieConsent.run({
                     sections: [
                         {
                             title: "Cookie Usage",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            description: "Provides a general overview of cookie usage, explaining the purpose and benefits of cookies in a user-friendly manner"
                         },
                         {
                             title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            description: "Describes the essential nature of these cookies, which are necessary for the website to function properly",
                             linkedCategory: "necessary"
                         },
                         {
                             title: "Functionality Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            description: "Explains the role of functionality cookies in enhancing user experience by remembering user preferences and settings",
                             linkedCategory: "functionality"
                         },
                         {
                             title: "Analytics Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            description: "Details how analytics cookies are used to collect information about how users interact with the website, helping to improve the website's performance",
                             linkedCategory: "analytics"
                         },
                         {
                             title: "Advertisement Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            description: "Describes the use of advertisement cookies in delivering targeted ads and measuring the effectiveness of advertising campaigns ",
                             linkedCategory: "marketing"
                         },
                         {
                             title: "More information",
-                            description: "For any query in relation to my policy on cookies and your choices, please <a class=\"cc__link\" href=\"#yourdomain.com\">contact me</a>."
+                            description: "Provides additional information and a contact link for users who have queries regarding the cookie policy and their choices "
                         }
                     ]
                 }
