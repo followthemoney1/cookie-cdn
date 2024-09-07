@@ -1,27 +1,38 @@
-:root {
-    --cc-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --cc-modal-border-radius: 0.5rem;
-    --cc-btn-border-radius: 0.4rem;
-    --cc-modal-transition-duration: 0.25s;
-    --cc-link-color: var(--cc-btn-primary-bg);
-    --cc-modal-margin: 1rem;
-    --cc-z-index: 2147483647;
-    --cc-bg: #0b0d0f; /* Dark background from the design */
-    --cc-primary-color: #00ffab; /* Green color from the design */
-    --cc-secondary-color: #5e6266;
-    --cc-btn-primary-bg: #00ffab; /* Green button background */
-    --cc-btn-primary-color: #fff;
-    --cc-btn-primary-border-color: var(--cc-btn-primary-bg);
-    --cc-btn-primary-hover-bg: #00e69e; /* Slightly darker green for hover */
-    --cc-btn-primary-hover-color: #fff;
-    --cc-btn-primary-hover-border-color: var(--cc-btn-primary-hover-bg);
-    --cc-btn-secondary-bg: #eaeff2;
+#cc-main {
+    color-scheme: dark;
+}
+.cc--dark-turquoise {
+    color-scheme: dark;
+
+    --cc-bg: #161a1c;
+    --cc-primary-color: rgb(239, 244, 246);
+    --cc-secondary-color: #b1bdc3;
+
+    --cc-btn-primary-bg: #10CA99;
+    --cc-btn-primary-color: #000;
+    --cc-btn-primary-hover-bg: #10CA99;
+    --cc-btn-primary-hover-color: #000;
+
+    --cc-btn-secondary-bg: #242c31;
     --cc-btn-secondary-color: var(--cc-primary-color);
-    --cc-btn-secondary-border-color: var(--cc-btn-secondary-bg);
     --cc-btn-secondary-hover-bg: #d4dae0;
     --cc-btn-secondary-hover-color: #000;
-    --cc-btn-secondary-hover-border-color: #d4dae0;
-    --cc-separator-border-color: #f0f4f7;
-    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
-    --cc-toggle-off-bg: #667481;
-  }
+
+    --cc-cookie-category-block-bg: #1e2428;
+    --cc-cookie-category-block-border: #1e2428;
+    --cc-cookie-category-block-hover-bg: #242c31;
+    --cc-cookie-category-block-hover-border: #242c31;
+    --cc-cookie-category-expanded-block-hover-bg: #242c31;
+    --cc-cookie-category-expanded-block-bg: #1e2428;
+    --cc-toggle-readonly-bg: #343e45;
+    --cc-overlay-bg: rgba(4, 6, 8, .85)!important;
+
+    --cc-toggle-on-knob-bg: var(--cc-bg);
+    --cc-toggle-readonly-knob-bg: var( --cc-cookie-category-block-bg);
+
+    --cc-separator-border-color: #222a30;
+
+    --cc-footer-border-color: #212529;
+    --cc-footer-bg: #0f1112;
+}
+
