@@ -43,7 +43,7 @@ CookieConsent.run({
           consentUpdate.ad_user_data = 'granted';
           consentUpdate.ad_personalization = 'granted';
         }
-    
+        console.log("update consent");
         // Update Google Analytics consent
         gtag('consent', 'update', consentUpdate);
       },    
